@@ -5,6 +5,7 @@
       <li><%= bookmark.movie.title %>  --> <%= bookmark.comment %>
     <% end %>
   </ol>
-  <%= link_to "add movie", new_list_bookmark_path(@list) %>
-  <%= link_to "back to lists", lists_path %>
+  <p><%= link_to "add movie", new_list_bookmark_path(@list) %></p>
+  <p><%= link_to "back to lists", lists_path %></p>
+  <p><%= link_to "CLICK HERE TO ADD IMAGE", add_image_path %></p>
 </div>

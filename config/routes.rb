@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     resources :bookmarks, only: %i[new create]
   end
   resources :bookmarks, only: :destroy
+  get '/image', to: 'lists#image', as: :add_image
   # Defines the root path route ("/")
   # root "articles#index"
 end
