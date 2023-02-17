@@ -1,8 +1,9 @@
 <div class="container pt-4 w-50">
-  <h1>LIST OF BOOKMARKS HERE...</h1>
+  <h1>YOUR LISTS</h1>
   <ol>
     <% @lists.each do |list| %>
-      <li><%= list.name %></li>
+      <li><%= link_to list.name, list_path(list) %></li>
     <% end %>
   </ol>
+  <%= link_to "ADD list", new_list_path %>
 </div>

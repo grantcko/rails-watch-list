@@ -1,5 +1,10 @@
 <div class="container pt-4 w-50">
-  <h1>SHOW CURRENT LIST HERE...</h1>
-  <p>NAME: <%= @list.name %></p>
-  <h1>ABLE TO VIEW BOOKMARKS HERE...</h1>
+  <h1><%= @list.name %></h1>
+  <ol>
+    <% @bookmarks.each do |bookmark| %>
+      <li><%= bookmark.movie.title %>  --> <%= bookmark.comment %>
+    <% end %>
+  </ol>
+  <%= link_to "add movie", new_list_bookmark_path(@list) %>
+  <%= link_to "back to lists", lists_path %>
 </div>

@@ -12,12 +12,13 @@ class ListsController < ApplicationController
     if @list.save
       redirect_to list_path(@list)
     else
-      status :unprocessable_entity
+      render :new, status: :unprocessable_entity
     end
   end
 
   def show
     @list = List.find(params[:id])
+    @bookmarks = Bookmark.where(list_id: @list.id)
   end
 end
 
