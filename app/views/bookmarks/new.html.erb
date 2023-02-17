@@ -1,8 +1,9 @@
 <div class="container pt-4 w-50">
   <h1>ABLE TO ADD NEW BOOKMARK HERE...</h1>
   <%= simple_form_for [@list, @bookmark] do |f| %>
-  <%= f.input :comment %>
-  <%= f.submit 'add' %>
+    <%= f.input :comment %>
+    <%= f.association :movie %>
+    <%= f.submit 'add' %>
   <% end %>
 
 </div>
